@@ -12,10 +12,19 @@ function App() {
       .catch(function (error) {
         // handle error
         console.log("error in auth : ", error);
+        if (error.code === 400) {
+          axios.get(error.message.authStatus.value)
+            .then(function (response) {
+
+              // handle success
+              console.log("success in auth : ", response);
+            })
+        }
       });
   }
   function enableWorkFlow() {
-    const enableURL = "https://api.thecodemesh.online/api/v1/enable/enable-user-workflow/61473d7ac0dc290012eb507d/" + window.location.search;
+    const shopParam = window.location.search.shop;
+    const enableURL = "https://api.thecodemesh.online/api/v1/enable/enable-user-workflow/61473d7ac0dc290012eb507d/?username=" + shopParam;
     axios.get(enableURL)
       .then(function (response) {
 

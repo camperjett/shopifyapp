@@ -23,8 +23,8 @@ function App() {
       });
   }
   function enableWorkFlow() {
-    const shopParam = window.location.search.shop;
-    const enableURL = "https://api.thecodemesh.online/api/v1/enable/enable-user-workflow/61473d7ac0dc290012eb507d/?username=" + shopParam;
+    const params = new URLSearchParams(window.location.search)
+    const enableURL = "https://api.thecodemesh.online/api/v1/enable/enable-user-workflow/61473d7ac0dc290012eb507d/?username=" + params.get('shop');
     axios.get(enableURL)
       .then(function (response) {
 

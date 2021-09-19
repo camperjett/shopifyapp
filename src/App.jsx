@@ -2,7 +2,7 @@ import axios from "axios";
 
 function App() {
   function auth() {
-    const url = "https://api.thecodemesh.online/api/v1/enable/user-workflow/61472d28c0dc290012eb5017/" + window.location.search;
+    const url = "https://api.thecodemesh.online/api/v1/enable/user-workflow/61473d7ac0dc290012eb507d/" + window.location.search;
     axios.get(url)
       .then(function (response) {
 
@@ -15,7 +15,7 @@ function App() {
       });
   }
   function enableWorkFlow() {
-    const enableURL = "https://api.thecodemesh.online/api/v1/enable/enable-user-workflow/61472d28c0dc290012eb5017/" + window.location.search;
+    const enableURL = "https://api.thecodemesh.online/api/v1/enable/enable-user-workflow/61473d7ac0dc290012eb507d/" + window.location.search;
     axios.get(enableURL)
       .then(function (response) {
 
@@ -28,7 +28,7 @@ function App() {
       });
   }
   function runSyncWorkFlow() {
-    const runURL = "https://api.thecodemesh.online/api/v1/trigger/user-workflow/61472d28c0dc290012eb5017";
+    const runURL = "https://api.thecodemesh.online/api/v1/trigger/user-workflow/61473d7ac0dc290012eb507d";
     axios.get(runURL)
       .then(function (response) {
 

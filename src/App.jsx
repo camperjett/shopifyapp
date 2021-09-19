@@ -6,11 +6,11 @@ function App() {
     axios.get(url)
       .then(function (response) {
         // handle success
-        console.log(response);
+        console.log("jaideep success!! : ", response);
       })
       .catch(function (error) {
         // handle error
-        console.log("error", error);
+        console.log("oh no bro error", error);
       });
   }
   return (

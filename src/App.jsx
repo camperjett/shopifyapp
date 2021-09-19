@@ -40,10 +40,11 @@ function App() {
         console.log("error in sync : ", error);
       });
   }
+  //  authenticate as soon as opened
+  auth();
   return (
     <div>
       <h1>Sync your customers</h1>
-      <button id="myButton" className="float-left submit-button" onClick={auth}>Auth</button>
       <button id="myButton" className="float-left submit-button" onClick={enableWorkFlow}>Enable Workflow</button>
       <button id="myButton" className="float-left submit-button" onClick={runSyncWorkFlow}>Force Run Workflow</button>
     </div>

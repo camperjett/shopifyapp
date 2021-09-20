@@ -2,7 +2,7 @@ import axios from "axios";
 
 function App() {
   function auth() {
-    const url = "https://api.thecodemesh.online/api/v1/auth/user-workflow/61473d7ac0dc290012eb507d/" + window.location.search;
+    const url = "https://api.thecodemesh.online/api/v1/auth/user-workflow/61480f6236f39a00126a7d2b/" + window.location.search;
     axios.get(url)
       .then(function (response) {
 
@@ -24,7 +24,7 @@ function App() {
   }
   function enableWorkFlow() {
     const params = new URLSearchParams(window.location.search)
-    const enableURL = "https://api.thecodemesh.online/api/v1/enable/user-workflow/61473d7ac0dc290012eb507d/?username=" + params.get('shop');
+    const enableURL = "https://api.thecodemesh.online/api/v1/enable/user-workflow/61480f6236f39a00126a7d2b/?username=" + params.get('shop');
     axios.get(enableURL)
       .then(function (response) {
 
@@ -37,7 +37,7 @@ function App() {
       });
   }
   function runSyncWorkFlow() {
-    const runURL = "https://api.thecodemesh.online/api/v1/trigger/user-workflow/61473d7ac0dc290012eb507d";
+    const runURL = "https://api.thecodemesh.online/api/v1/trigger/user-workflow/61480f6236f39a00126a7d2b";
     axios.get(runURL)
       .then(function (response) {
 
